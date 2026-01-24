@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Octadesk tests site</title>
+</head>
+<body>
+  <header>
+    <p>Cabeçalho</p>
+    <nav class="nav">
+      <a href="../index.html">Página inicial</a>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <h1>Ambiente de Testes - Chat com botão custom</h1>
+      <div class="button-group">
+        <button id="btn-open-octadesk-widget">
+          Falar com atendimento
+        </button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>Rodapé</p>
+  </footer>
+  
+  <script>
+    (function (o, c) {
+      o.octadesk = o.octadesk || {};
+      o.octadesk.chatOptions = {
+        subDomain: 'o157076-d18',
+        showButton: 'false',
+        openOnMessage: 'true',
+        showFooterPoweredBy: 'true',
+        hide: 'false'
+      };
+      var bd = c.getElementsByTagName("body")[0];
+      var sc = c.createElement("script");
+      sc.async = 1;
+      sc.src = 'https://cdn.octadesk.com/embed.js';
+      bd.appendChild(sc);
+    })(window, document);
+
+    // No seu site você deve ter um botão com o id 'btn-open-octadesk-widget' para abrir o chat.
+    document.getElementById('btn-open-octadesk-widget').addEventListener('click', function () {
+      window.octadesk.chat.showApp('o157076-d18');
+      window.octadesk.chat.toggle();
+      
+    });
+  </script>
+</body>
+</html>

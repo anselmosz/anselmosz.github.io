@@ -1,0 +1,113 @@
+/* Reset simples */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estrutura geral da página */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f6f8;
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+header {
+  background-color: #ffffff;
+  padding: 16px 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* Conteúdo principal */
+main {
+  flex: 1; /* ocupa o espaço entre header e footer */
+  padding: 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Footer */
+footer {
+  background-color: #ffffff;
+  padding: 12px 24px;
+  border-top: 1px solid #e5e7eb;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Container principal */
+.container {
+  width: 100%;
+  max-width: 600px;
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Títulos */
+h1, h2, h3 {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* Parágrafos */
+p {
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+/* Campos de formulário */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Botões padrão */
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #6e8ed5;
+}
+
+/* H*
